@@ -1,4 +1,5 @@
-﻿using IntercityTaxi.Application.DTOs.City;
+﻿using IntercityTaxi.Application.Abstractions;
+using IntercityTaxi.Application.DTOs.City;
 using IntercityTaxi.Application.DTOs.Order;
 using IntercityTaxi.Application.DTOs.User;
 using IntercityTaxi.Application.Repositories;
@@ -9,13 +10,13 @@ using IntercityTaxi.Domain.Models.Order;
 namespace IntercityTaxi.Application.Service;
 
 public class OrderService(
-    UserService userService,
+    IUserService userService,
     ICityRepository cityRepository,
     ITripTypeRepository tripTypeRepository,
     IOrderRepository orderRepository
     )
 {
-    private readonly UserService _userService = userService;
+    private readonly IUserService _userService = userService;
     private readonly ICityRepository _cityRepository = cityRepository;
     private readonly ITripTypeRepository _tripTypeRepository = tripTypeRepository;
     private readonly IOrderRepository _orderRepository = orderRepository;
