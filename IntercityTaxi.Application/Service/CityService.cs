@@ -27,6 +27,12 @@ public class CityService(
             return Result<City>.Failure(resultCreateCity.Error);
         }
 
+        // var resultCreateCity = City.Create(cityName);
+        // if (!resultCreateCity.IsSuccess)
+        // {
+        //     return Result<City>.Failure(resultCreateCity.Error);
+        // }
+
         var resultAddToDB = await _cityRepository.Create(resultCreateCity.Value);
         if (!resultAddToDB.IsSuccess) 
         {
