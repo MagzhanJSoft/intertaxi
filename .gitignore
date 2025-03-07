@@ -41,8 +41,9 @@ out/
 *.log
 *.cache
 *.tmp
-intercitytaxi.api/appsettings.*.json
-
+/intercitytaxi.api/appsettings.*.json
+/IntercityTaxi.api/appsettings.*.json
+/IntercityTaxi.api/appsettings.json
 # NuGet
 *.nupkg
 packages/
